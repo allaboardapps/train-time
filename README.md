@@ -36,17 +36,63 @@
 
 ### Intents
 
-* Next Train
-* Next Trains
+* NextTrain
+* NextTrains
 * Cancel
 * Stop
 * Help
 
 ### Utterances
 
+* Next Train
+* Next Trains
+
 ### Slots
 
-### Scripts
+* LIST_OF_TRAIN_LINES
+
+  ```
+  Blue
+  Brown
+  Green
+  Orange
+  Pink
+  Purple
+  Red
+  ```
+  - {line} line
+
+* LIST_OF_TRAIN_DIRECTIONS
+
+  ```
+  North
+  Northbound
+  South
+  Southbound
+  East
+  Eastbound
+  West
+  Westbound
+  Both
+  All
+  ```
+  - going {direction}
+  - headed {direction}
+  - heading {direction}
+  - moving {direction}
+  - {direction}
+
+* LIST_OF_TRAIN_STATIONS (Multiple)
+
+  ```
+  Western
+  Damen
+  Lawrence
+  ...
+  ```
+  - {station} station
+
+### Dialog model
 
 ## Brainstorm
 

@@ -2,18 +2,29 @@
   "name": "train-time",
   "version": "0.0.1",
   "description": "An app to provide users with upcoming train arrival times for specific train directions, train lines, and train stations on the Chicago Transportation Authority (CTA) system through a Voice User Interface (VUI)",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": "8.2.1"
+  },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "nf start"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/allaboardapps/train-time.git"
   },
-  "author": "wrburgess@gmail.com",
+  "author": "randy@allaboardapps.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/allaboardapps/train-time/issues"
   },
-  "homepage": "https://github.com/allaboardapps/train-time#readme"
+  "homepage": "https://github.com/allaboardapps/train-time#readme",
+  "dependencies": {
+    "express": "4.15.3",
+    "foreman": "2.0.0"
+  },
+  "devDependencies": {
+    "jest": "20.0.4"
+  }
 }

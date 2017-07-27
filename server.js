@@ -5,7 +5,7 @@ const express = require("express")
 const bodyParser = require("body-parser")
 
 const app = express()
-app.use(bodyParser.json({ type: 'application/*+json' }))
+app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
   res.send('Welcome to the Train Time app.')
@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 app.post('/trains', (req, res) => {
   if (!req.body) return res.json({ 'error': 'No request body present' })
   console.log(`req.headers['content-type'] = ${req.headers['content-type']}`)
-  console.log(`req.body.test=${req.body.test}`)
+  console.log(`req.body=${req.body.test}`)
   res.json({ 'req_body': `${req.body}` })
 })
 

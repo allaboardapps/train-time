@@ -13,6 +13,7 @@ app.get('/', (req, res) => {
 
 app.post('/trains', (req, res) => {
   if (!req.body) return res.json({ 'error': 'No request body present' })
+  console.log(req.body)
   res.json({ 'train': `Body: ${req.body}` })
 })
 

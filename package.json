@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "nf start"
+    "start": "nf start",
+    "dev": "node server --inspect"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,8 @@
   "dependencies": {
     "body-parser": "1.17.2",
     "express": "4.15.3",
-    "foreman": "2.0.0"
+    "foreman": "2.0.0",
+    "morgan": "1.8.2"
   },
   "devDependencies": {
     "jest": "20.0.4"

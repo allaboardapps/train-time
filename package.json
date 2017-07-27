@@ -4,7 +4,8 @@
   "description": "An app to provide users with upcoming train arrival times for specific train directions, train lines, and train stations on the Chicago Transportation Authority (CTA) system through a Voice User Interface (VUI)",
   "main": "server.js",
   "engines": {
-    "node": "8.2.1"
+    "node": "8.2.1",
+    "npm": "5.3.0"
   },
   "scripts": {
     "test": "jest",

@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
 })
 
 app.post('/trains', (req, res) => {
-  if (!req.body) return res.json({ 'error': 'error' })
-  res.json({ 'train': `Body: ${req.body.test}` })
+  if (!req.body) return res.json({ 'error': 'No request body present' })
+  res.json({ 'train': `Body: ${req.body}` })
 })
 
 app.listen(PORT, () => {

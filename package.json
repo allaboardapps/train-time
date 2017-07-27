@@ -1,0 +1,19 @@
+{
+  "name": "train-time",
+  "version": "0.0.1",
+  "description": "An app to provide users with upcoming train arrival times for specific train directions, train lines, and train stations on the Chicago Transportation Authority (CTA) system through a Voice User Interface (VUI)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allaboardapps/train-time.git"
+  },
+  "author": "wrburgess@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allaboardapps/train-time/issues"
+  },
+  "homepage": "https://github.com/allaboardapps/train-time#readme"
+}

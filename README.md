@@ -1,6 +1,9 @@
 # Train Time
 
 * Version 0.0.1
+* Alexa Project Name: Train Time
+* Alexa Invocation Name: train time
+* Alexa Project ID: amzn1.ask.skill.37a0bd36-fd3a-4236-84ef-ed1d8aa6b612
 
 ## Project Goals
 

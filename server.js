@@ -3,15 +3,17 @@ const PORT = process.env.PORT || 8080
 
 const express = require("express")
 const bodyParser = require("body-parser")
-const app = express()
-app.use(bodyParser.json())
 
-app.get('/', (request, response) => {
-  response.send('Welcome to the Train Time app.')
+const app = express()
+app.use(bodyParser.json({ type: 'application/*+json' }))
+
+app.get('/', (req, res) => {
+  res.send('Welcome to the Train Time app.')
 })
 
-app.get('/trains', (request, response) => {
-  response.send('Hello Trains!')
+app.post('/trains', (req, res) => {
+  if (!req.body) return res.json({ 'error': 'error' })
+  res.json({ 'train': `Body: ${req.body.test}` })
 })
 
 app.listen(PORT, () => {

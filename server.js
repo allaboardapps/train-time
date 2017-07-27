@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 app.post('/trains', (req, res) => {
   if (!req.body) return res.json({ 'error': 'No request body present' })
   console.log(`req.headers['content-type'] = ${req.headers['content-type']}`)
-  console.log(`req.body=${req.body}`)
+  console.log(`req.body.test=${req.body.test}`)
   res.json({ 'req_body': `${req.body}` })
 })
 

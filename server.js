@@ -17,19 +17,28 @@ app.post('/trains', (req, res) => {
   if (!req.body) return res.json({ 'error': 'No request body present' })
   console.log(JSON.stringify(req.body, null, 2))
 
-  const responseBody =
-  {
+  const responseBody = {
     "version": "1.0",
+    "sessionAttributes": {
+      "string": "<object>"
+    },
     "response": {
       "outputSpeech": {
         "type": "text",
         "text": "The next Southbound Brown Line Train should arrive at the Damen station in 11 minutes"
-      }
+      },
+      "card": {
+        "type": "Simple",
+        "title": "Train Time for You",
+        "content": "The next Southbound Brown Line Train should arrive at the Damen station in 11 minutes"
+      },
     },
-    "card": {
-      "type": "Simple",
-      "title": "Train Time for You",
-      "content": "The next Southbound Brown Line Train should arrive at the Damen station in 11 minutes"
+     "reprompt": {
+      "outputSpeech": {
+        "type": "string",
+        "text": "string",
+        "ssml": "string"
+      }
     },
     "shouldEndSession": true
   }

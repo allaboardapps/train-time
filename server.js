@@ -21,8 +21,8 @@ app.post('/trains', (req, res) => {
     "version": "1.0",
     "response": {
       "outputSpeech": {
-        "type": "PlainText",
-        "text": "The next Southbound Brown Line Train should arrive at the Damen station in 11 minutes"
+        "type": "SSML",
+        "ssml": "<speak>The next Southbound Brown Line Train should arrive at the <phoneme alphabet='ipa' ph='dɛmen'>Damen station in 11 minutes</speak>"
       }
     },
     "shouldEndSession": true

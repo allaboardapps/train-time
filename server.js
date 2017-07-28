@@ -24,7 +24,7 @@ app.post('/trains', (req, res) => {
     },
     "response": {
       "outputSpeech": {
-        "type": "text",
+        "type": "PlainText",
         "text": "The next Southbound Brown Line Train should arrive at the Damen station in 11 minutes"
       },
       "card": {

@@ -6,7 +6,7 @@ const morgan = require('morgan')
 const bodyParser = require("body-parser")
 
 const app = express()
-app.use(morgan('combined'))
+
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
@@ -16,7 +16,25 @@ app.get('/', (req, res) => {
 app.post('/trains', (req, res) => {
   if (!req.body) return res.json({ 'error': 'No request body present' })
   console.log(JSON.stringify(req.body, null, 2))
-  res.json(req.body)
+
+  const responseBody =
+  {
+    "version": "1.0",
+    "response": {
+      "outputSpeech": {
+        "type": "text",
+        "text": "The next Southbound Brown Line Train should arrive at the Damen station in 11 minutes"
+      }
+    },
+    "card": {
+      "type": "Simple",
+      "title": "Train Time for You",
+      "content": "The next Southbound Brown Line Train should arrive at the Damen station in 11 minutes"
+    },
+    "shouldEndSession": true
+  }
+
+  res.json(responseBody)
 })
 
 app.listen(PORT, (req, res) => {
